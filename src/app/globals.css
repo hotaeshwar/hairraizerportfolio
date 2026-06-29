@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fcfcfc;
+  --foreground: #09090b;
+  --gold-primary: #ecab00;
+  --gold-secondary: #c99300;
+  --gold-accent: #fdf5df;
+}
+
+@theme {
+  --color-gold-primary: var(--gold-primary);
+  --color-gold-secondary: var(--gold-secondary);
+  --color-gold-accent: var(--gold-accent);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #fcfcfc;
+}
+
+body {
+  background-color: #fcfcfc;
+  color: #09090b;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom premium scrollbar matching gold theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdfbf7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 9999px;
+  border: 2px solid #fdfbf7;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ecab00;
+}
+
+/* Luxury glow scroll effects */
+.glow-card-gold {
+  box-shadow: 0 0 25px rgba(197, 168, 128, 0.04);
+  border: 1px solid rgba(197, 168, 128, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-card-gold:hover {
+  box-shadow: 0 0 35px rgba(197, 168, 128, 0.15);
+  border-color: rgba(197, 168, 128, 0.4);
+}
+
+/* Keyframes for background gradient blobs */
+@keyframes float-blob {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(40px, -60px) scale(1.12);
+  }
+  66% {
+    transform: translate(-30px, 40px) scale(0.92);
+  }
+}
+
+.animate-blob {
+  animation: float-blob 18s infinite ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Text glow */
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(197, 168, 128, 0.3);
+}
+
