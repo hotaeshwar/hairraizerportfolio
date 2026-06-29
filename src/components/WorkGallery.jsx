@@ -97,7 +97,7 @@ export default function WorkGallery() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               key={item.id}
               onClick={() => setActiveVideo(item)}
-              className="group relative h-96 w-full rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-200 transition-all duration-500 hover:border-gold-primary hover:shadow-[0_0_25px_rgba(236,171,0,0.25)] cursor-pointer shadow-sm"
+              className="group relative h-[540px] w-full rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-200 transition-all duration-500 hover:border-gold-primary hover:shadow-[0_0_25px_rgba(236,171,0,0.25)] cursor-pointer shadow-sm"
             >
               {/* Loop Video Inline (Muted) */}
               <video
